@@ -1,22 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="arpi4" fetch="https://github.com/android-rpi"/>
-  <remote name="arpi4" fetch="https://github.com/omnirom"/>
+  <remote name="android-rpi" fetch="https://github.com/android-rpi"/>
+  <remote name="omnirom" fetch="https://github.com/omnirom"/>
 
-  <remove-project name="platform/frameworks/av"/>
-  <project path="frameworks/av" name="frameworks_av" revision="arpi-11" remote="arpi4"/>
-  <remove-project name="platform/frameworks/native"/>
-  <project path="frameworks/native" name="frameworks_native" revision="arpi-11" remote="arpi4"/>
-  <remove-project name="platform/frameworks/base"/>
-  <project path="frameworks/base" name="android_frameworks_base " revision="android-11" remote="arpi4"/>
+  
+  <project path="frameworks/av" name="android_frameworks_av" remote="omnirom" revision="android-11" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="omnirom" revision="android-11" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="omnirom" revision="android-11" />
+  <project path="frameworks/opt/chips" name="android_frameworks_opt_chips" remote="omnirom" revision="android-11" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="omnirom" revision="android-11" />
+  <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="omnirom" revision="android-11" />
+  <project path="frameworks/opt/net/ims" name="android_frameworks_opt_net_ims" remote="omnirom" revision="android-11" />
+  
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="omnirom" revision="android-11" />
+  <project path="hardware/libhardware" name="android_hardware_libhardware" remote="omnirom" revision="android-11" />
+  <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="omnirom" revision="android-11" />
+  
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="omnirom" revision="android-11" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="omnirom" revision="android-11" />
+  <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="omnirom" revision="android-11" />
+  <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="omnirom" revision="android-11" />
+  <project path="packages/apps/Terminal" name="android_packages_apps_Terminal" remote="omnirom" revision="android-11" />
+  <project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" remote="omnirom" revision="android-11" />
+  
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" groups="pdk,linux,arm" clone-depth="1" revision="a9b70fc1b59747d1334677e539b2ef4c752a59a1" />
+  <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" groups="pdk,linux" clone-depth="1" revision="639243dd5cb2c5ea1313f033c75c8c533813a484"/>
+  <project path="prebuilts/gas/linux-x86" name="platform/prebuilts/gas/linux-x86" groups="pdk,linux,x86" clone-depth="1" remote="aosp" revision="592150fc8ae9f48f2e73f390961f32ca6f5f6a9f" />
+  
+  
+  
+ 
 
   <remove-project name="platform/external/mesa3d"/>
-  <project path="external/mesa3d" name="external_mesa3d" revision="v3d-20.3" remote="arpi4"/>
-  <project path="external/drm_gralloc" name="external_drm_gralloc" revision="v3d-20.3" remote="arpi4"/>
+  <project path="external/mesa3d" name="external_mesa3d" revision="v3d-20.3" remote="android-rpi"/>
+  <project path="external/drm_gralloc" name="external_drm_gralloc" revision="v3d-20.3" remote="android-rpi"/>
 
-  <project path="kernel/arpi4" name="android_kernel_brcm_arpi" revision="android-11" remote="arpi"/>
-  <project path="hardware/arpi4" name="hardware_arpi" revision="arpi-11" remote="arpi"/>
-  <project path="device/arpi4/rpi4" name="android_device_brcm_rpi4" revision="android-11" remote="arpi4"/>
+  <project path="kernel/arpi4" name="android_kernel_brcm_arpi" revision="android-11" remote="omnirom"/>
+  <project path="hardware/arpi4" name="hardware_arpi" revision="arpi-11" remote="android-rpi"/>
+  <project path="device/arpi4/rpi4" name="android_device_brcm_rpi4" revision="android-11" remote="omnirom"/>
 
-  <project path="vendor/arpi4/apps_settings" name="android_packages_apps_Settings " revision="android-11" remote="arpi4"/>
+  
 </manifest>
