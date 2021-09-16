@@ -2,7 +2,7 @@
 <manifest>
   <remote name="android-rpi4" fetch="https://github.com/G-Raja"/>
 
-  <project path="hardware/arpi4" name="hardware_arpi" revision="android-11" remote="android-rpi4"/>
+  <project path="hardware/arpi4" name="hardware_arpi4" revision="android-11" remote="android-rpi4"/>
   <project path="device/arpi4/rpi4" name="device_brcm_rpi4" revision="android-11" remote="android-rpi4"/>
 
   
